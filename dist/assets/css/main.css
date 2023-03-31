@@ -17,6 +17,7 @@ html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 
 main {
@@ -654,7 +655,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 100vw;
         width: 100%;
         padding: 0 20px 0 0;
     }
@@ -809,6 +809,7 @@ body {
 
 .training__inner {
     padding-top: 28px;
+    padding-bottom: 111px;
 }
 
 .training__title {
@@ -911,4 +912,231 @@ body {
     .training__right {
         max-width: 100%;
     }
+}
+
+.prices {
+    position: relative;
+    background-color: #fff3f3;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+    .prices::after {
+        display: none;
+    }
+}
+
+.prices::after {
+    content: "";
+    position: absolute;
+    right: -300px;
+    top: 23px;
+    background: url(../img/content/prices-bg.png) no-repeat center/cover;
+    opacity: 0.5;
+    width: 920px;
+    height: 100%;
+}
+
+.prices__inner {
+    position: relative;
+    padding: 90px 0;
+}
+
+@media screen and (max-width: 425px) {
+    .prices__inner {
+        padding: 40px 0;
+    }
+}
+
+.prices__title {
+    margin-bottom: 30px;
+    font-family: "Nunito";
+    font-weight: 300;
+    font-size: 70px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #d29191;
+    max-width: 685px;
+}
+
+@media screen and (max-width: 992px) {
+    .prices__title {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .prices__title {
+        font-size: 50px;
+    }
+}
+
+.prices__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+}
+
+@media screen and (max-width: 992px) {
+    .prices__cards {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 654px) {
+    .prices__cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.prices__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 340px;
+    padding-left: 25px;
+    padding-top: 20px;
+    padding-right: 60px;
+    flex-shrink: 0;
+}
+
+.prices__card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -15px;
+    height: 125%;
+    border-right: 2px dashed rgba(130, 130, 130, 0.6);
+}
+
+@media screen and (max-width: 992px) {
+    .prices__card::after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .prices__card {
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .prices__card {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.prices__special {
+    position: absolute;
+    top: -20px;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.12em;
+    color: #377cba;
+    padding: 8px 16px;
+    background-color: #b6deff;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.prices__tariff {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    text-align: center;
+    color: #000;
+}
+
+.prices__body {
+    position: relative;
+    width: 100%;
+}
+
+.prices__currency {
+    left: -22px;
+    bottom: 0;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 125%;
+    color: #d29191;
+}
+
+@media screen and (max-width: 425px) {
+    .prices__currency {
+        font-size: 30px;
+        left: 5px;
+    }
+}
+
+.prices__price {
+    font-family: "Nunito";
+    font-weight: 600;
+    font-size: 100px;
+    line-height: 100%;
+    color: #000;
+}
+
+@media screen and (max-width: 425px) {
+    .prices__price {
+        font-size: 60px;
+        margin-left: 30px;
+    }
+}
+
+.prices__currency, .prices__float, .prices__year {
+    position: absolute;
+}
+
+.prices__float {
+    top: 10px;
+    right: 60px;
+    font-family: "Nunito";
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 100%;
+    color: #000;
+}
+
+@media screen and (max-width: 425px) {
+    .prices__float {
+        right: 100px;
+        top: 5px;
+        font-size: 30px;
+    }
+}
+
+.prices__year {
+    bottom: 10px;
+    right: -20px;
+    font-family: "Nunito";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 125%;
+    color: #000;
+}
+
+@media screen and (max-width: 425px) {
+    .prices__year {
+        font-size: 20px;
+        right: 30px;
+        bottom: 5px;
+    }
+}
+
+.prices__desc {
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    text-align: center;
+    color: #d29191;
 }
