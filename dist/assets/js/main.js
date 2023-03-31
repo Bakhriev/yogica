@@ -12,3 +12,23 @@ reviewCards.forEach((card) => {
     reviewCards[1].classList.add('hovered')
   })
 })
+
+document.addEventListener('click', (e) => {
+  let currentDropdown
+  if (e.target.closest('[data-dropdown]')) {
+    console.log('click')
+    currentDropdown = e.target.closest('[data-dropdown]')
+    currentDropdown.classList.toggle('opened')
+
+    // let selected = currentDropdown.querySelector('.selected')
+    // currentDropdown.querySelectorAll('.sub-menu__item').forEach((item) => {
+    //   item.addEventListener('click', () => {
+    //     selected.innerText = item.innerText
+    //   })
+    // })
+  }
+  document.querySelectorAll('[data-dropdown].opened').forEach((dropdown) => {
+    if (dropdown === currentDropdown) return
+    dropdown.classList.remove('opened')
+  })
+})
