@@ -1002,6 +1002,7 @@ body {
     top: 23px;
     background: url(../img/content/prices-bg.webp) no-repeat center/cover;
     opacity: 0.5;
+    filter: brightness(1.4);
     width: 920px;
     height: 100%;
 }
