@@ -985,8 +985,8 @@ body {
 
 .prices {
     position: relative;
-    background-color: #fff3f3;
     overflow: hidden;
+    background-color: #fff3f3;
 }
 
 @media screen and (max-width: 992px) {
@@ -998,17 +998,16 @@ body {
 .prices::after {
     content: "";
     position: absolute;
-    right: -300px;
+    background: url(../img/content/prices.png) no-repeat;
     top: 23px;
-    background: url(../img/content/prices-bg.webp) no-repeat center/cover;
-    opacity: 0.5;
-    filter: brightness(1.4);
-    width: 920px;
+    right: 0px;
+    width: 600px;
     height: 100%;
 }
 
 .prices__inner {
     position: relative;
+    z-index: 2;
     padding: 90px 0;
 }
 
