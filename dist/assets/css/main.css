@@ -138,6 +138,7 @@ body {
     position: absolute;
     top: 1.7rem;
     left: -5px;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
     background-color: #d29191;
@@ -149,6 +150,10 @@ body {
     display: block;
     padding: 5px 5px;
     color: #fff;
+}
+
+.sub-menu__link:hover {
+    background-color: #7d4a4a;
 }
 
 .header {
@@ -995,7 +1000,7 @@ body {
     position: absolute;
     right: -300px;
     top: 23px;
-    background: url(../img/content/prices-bg.png) no-repeat center/cover;
+    background: url(../img/content/prices-bg.webp) no-repeat center/cover;
     opacity: 0.5;
     width: 920px;
     height: 100%;
